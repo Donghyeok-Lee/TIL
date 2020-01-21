@@ -112,31 +112,3 @@
 #     print(a)
 # else:
 #     print(stu_name[a])
-
-
-# # Project Euler No.1
-# mysum = 0
-# for i in range(1, 1000):
-#     if i % 3 == 0 or i % 5 == 0:
-#         mysum += i
-
-# print(mysum)
-
-
-# # Project Euler No.2
-# def fibo(n):
-#     if n > 1:
-#         return fibo(n-1)+fibo(n-2)
-#     else:
-#         return n
-
-# x = 0
-# n = 2
-# mysum = 0
-# while x < 4000000:
-#     if fibo(n) % 2 == 0:
-#          mysum += fibo(n)
-#     n += 1
-#     x = fibo(n)
-
-# print(mysum)
