@@ -276,7 +276,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 
 
-SSAFY에서 작업하기
+### Github 연결 순서
 
 [로컬]
 
@@ -297,51 +297,31 @@ SSAFY에서 작업하기
 
 
 
-로컬.git에는 연결된 주소가 저장되어 있음
-
-git remote -v 로 확인 가능
-
-
-
-`URL` 잘못 친 경우
-
-git remote rm origin `=>` 연결된 origin 주소 없애기
+* 로컬.git에는 연결된 주소가 저장되어 있음
+  * git remote -v 로 확인 가능
 
 
 
-clone : Romote Repo(Github)에 있는 파일을 복제해오는 명령어
-
-clone 해온 경우 git init 필요 X(.git도 같이 옴)
-
-clone 최초에 한 번
-
-git clone https://github.com/Donghyeok-Lee/test.git 등
+* `URL` 잘못 친 경우 (잘못 연결한 경우)
+  * git remote rm origin `=>` 연결된 origin 주소 없애기
 
 
 
+### clone
 
-
-git add .
-
-git commit -m "c 기능 개발"
-
-git push (push도 경로가 다 있으므로 push까지만 입력)
-
-
-
-
-
-ssafy에는 이미 폴더가 존재함 / 버전을 업그레이드하면 됨
-
-pull : 최신화된 것들만 들고 오는 명령어
+> Romote Repo(Github)에 있는 파일을 복제해오는 명령어
+>
+> clone 해온 경우 git init 필요 X(.git도 같이 옴)
+>
+> <u>clone 최초에 한 번</u>
 
 
 
-git pull origin master : 기본으로 설정 안 된 경우
+사용법 : git clone https://github.com/Donghyeok-Lee/test.git 등
 
 
 
-settings - Collaborators 에서 설정해줘야 clone, push, pull 할 수 있음
+Github의 settings - Collaborators 에서 설정해줘야 clone, push, pull 할 수 있음
 
 
 
@@ -367,39 +347,3 @@ settings - Collaborators 에서 설정해줘야 clone, push, pull 할 수 있음
 
 
 
-
-
-
-pip install jupyter
-
-> Jupyter Notebook 설치
-
-실행시 ] git bash 창에서 jupyter notebook 입력
-
-b : 새로운 cell 생성 (커맨드 모드)
-
-Ctrl + Enter : 현재 셀 실행
-
-Shift + Enter : 현재 셀 실행 + 다음 셀 선택 (or 없을 경우 셀 생성)
-
-Alt + Enter : 현재 셀 실행 + 다음 셀 생성
-
-m : 마크다운 쓰듯이
-
-ESC + h : 단축키
-
-
-
-git bash here
-
-vi~/.bashrc
-
-i 누르고 alias jn="jupyter notebook"
-
-esc 누르다가 : wq
-
-source ~/.bashrc
-
-
-
- 크롬 - 글꼴 맞춤설정 - 고정폭 글꼴 - D2Coding
