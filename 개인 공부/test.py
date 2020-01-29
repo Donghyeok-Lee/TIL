@@ -38,28 +38,58 @@
 # print(ins_sort(d))
 
 
-# 병합 정렬
-def merge_sort(a):
-    n = len(a)
-    if n <= 1: # 종료조건, 정렬할 리스트의 자료 개수가 1개 이하이면 정렬할 필요 없음
-        return a
-    # 그룹을 나누어 각각 병합 정렬을 호출하는 과정
-    mid = n //2 # 중간을 기준으로 2개로 나눔
-    g1 = merge_sort(a[:mid]) # 재귀 호출, 첫 번째 그룹
-    g2 = merge_sort(a[mid:]) # 재귀 호출, 두 번째 그룹
-    # 이제부터 2개의 그룹을 1개로 병합하기 시작
-    result = []
-    while g1 and g2: # g1과 g2에 모두 자료가 남아있을 때
-        if g1[0] < g2[0]: # 두 그룹의 맨 앞 위치 비교
-            result.append(g1.pop(0))
-        else:
-            result.append(g2.pop(0))
-        # 아직 남은 자료들이 다시 추가되어 반복
-    while g1:
-        result.append(g1.pop(0))
-    while g2:
-        result.append(g2.pop(0))
-    return result
+# # 병합 정렬
+# def merge_sort(a):
+#     n = len(a)
+#     if n <= 1: # 종료조건, 정렬할 리스트의 자료 개수가 1개 이하이면 정렬할 필요 없음
+#         return a
+#     # 그룹을 나누어 각각 병합 정렬을 호출하는 과정
+#     mid = n //2 # 중간을 기준으로 2개로 나눔
+#     g1 = merge_sort(a[:mid]) # 재귀 호출, 첫 번째 그룹
+#     g2 = merge_sort(a[mid:]) # 재귀 호출, 두 번째 그룹
+#     # 이제부터 2개의 그룹을 1개로 병합하기 시작
+#     result = []
+#     while g1 and g2: # g1과 g2에 모두 자료가 남아있을 때
+#         if g1[0] < g2[0]: # 두 그룹의 맨 앞 위치 비교
+#             result.append(g1.pop(0))
+#         else:
+#             result.append(g2.pop(0))
+#         # 아직 남은 자료들이 다시 추가되어 반복
+#     while g1:
+#         result.append(g1.pop(0))
+#     while g2:
+#         result.append(g2.pop(0))
+#     return result
 
-d = [6, 8, 3, 9, 10, 1, 2, 4, 7, 5]
-print(merge_sort(d))
+# d = [6, 8, 3, 9, 10, 1, 2, 4, 7, 5]
+# print(merge_sort(d))
+
+
+"""
+
+
+
+
+x = 30
+test = []
+
+while x != 1:
+    for i in range(2, x+1):
+        if x % i == 0:
+            test.append(i)
+            x //= i
+            print(x)
+
+print(test)
+"""
+
+
+data_list = [1, 3, 4, 5, 7, 2, 6]
+test = [] # 두 값의 차이를 저장할 함수
+
+for i in range(1, len(data_list)):
+    print(data_list[:i], data_list[i:])
+    print('첫번째 합 : {0} / 두번째 합 {1}'.format(sum(data_list[:i]), sum(data_list[i:])))
+    test.append(sum(data_list[:i]) - sum(data_list[i:]))
+
+print('test : {0}'.format(test))
