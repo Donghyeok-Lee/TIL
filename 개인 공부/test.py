@@ -81,7 +81,6 @@ while x != 1:
             print(x)
 
 print(test)
-"""
 
 
 data_list = [1, 3, 4, 5, 7, 2, 6]
@@ -93,3 +92,22 @@ for i in range(1, len(data_list)):
     test.append(sum(data_list[:i]) - sum(data_list[i:]))
 
 print('test : {0}'.format(test))
+"""
+
+
+def solution(s):
+    que = []
+    stack = []
+    
+    for x in s:
+        if x.isalpha():
+            que.append(x.lower())
+            stack.append(x.lower())
+    while que:
+        if que.pop(0) != stack.pop():
+            return False
+    return True
+
+print(solution('Wow'))
+print(solution('Madam,I`m Adam'))
+print(solution('Madam,I am Adam'))

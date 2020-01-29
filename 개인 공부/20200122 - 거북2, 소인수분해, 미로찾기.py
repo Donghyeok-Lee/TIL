@@ -99,7 +99,6 @@ for key, val in data_dict.items():
 
 print(' x '.join(text))
 
-"""
 
 #미로 찾기 알고리즘 공부할 것!
 
@@ -142,3 +141,29 @@ maze = {
 }
 
 print(solve_maze(maze,'a', 'n'))
+
+
+stock = [10300, 9600, 9800, 8200, 7800, 8300, 9500, 9800, 10200, 9500]
+n = len(stock)
+max_profit = 0
+
+for i in range(n-1):
+    for j in range(i+1, n):
+        profit = stock[j] - stock[i]
+        if profit > max_profit:
+            max_profit = profit
+
+print(max_profit)
+"""
+
+stock = [10300, 9600, 9800, 8200, 7800, 8300, 9500, 9800, 10200, 9500]
+n = len(stock)
+max_profit = 0
+min_price = stock[0]
+for i in range(1, n):
+    profit = stock[i] - min_price # 지금까지 최솟값에 주식을 사서 i 날에 파는 수익
+    if profit > max_profit:
+        max_profit = profit
+    if stock[i] < min_price:
+        min_price = stock[i]
+print(max_profit)
