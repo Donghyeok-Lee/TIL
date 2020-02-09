@@ -111,3 +111,5 @@ def solution(s):
 print(solution('Wow'))
 print(solution('Madam,I`m Adam'))
 print(solution('Madam,I am Adam'))
+
+
