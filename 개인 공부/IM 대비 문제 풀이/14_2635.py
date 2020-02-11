@@ -4,9 +4,9 @@ N = int(input())
 test = []
 test.append(N)
 max_len = 0
-for i in range(N):
+for i in range(N + 1):
     test.append(i)
-    while test[-1] > 0:
+    while test[-1] >= 0:
         test.append(test[-2] - test[-1])
     test.pop(-1)
     if max_len < len(test):
