@@ -188,7 +188,7 @@ fiveQueen()
 
 """
 
-
+# 재귀로 해보기!
 
 def confirm(board, current, qindex, n):
     for i in range(current):                        # 내가 놓은 열에 다른 퀸이 있나요? - 위아래
