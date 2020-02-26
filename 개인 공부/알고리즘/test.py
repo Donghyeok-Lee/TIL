@@ -95,21 +95,21 @@ print('test : {0}'.format(test))
 """
 
 
-def solution(s):
-    que = []
-    stack = []
-    
-    for x in s:
-        if x.isalpha():
-            que.append(x.lower())
-            stack.append(x.lower())
-    while que:
-        if que.pop(0) != stack.pop():
-            return False
-    return True
+def test(num1, num2):
+    if num1 < num2:
+        num1, num2 = num2, num1
 
-print(solution('Wow'))
-print(solution('Madam,I`m Adam'))
-print(solution('Madam,I am Adam'))
+    while num2 != 0:
+        n = num1 % num2
+        num1 = num2
+        num2 = n
 
+    return num1
 
+def gcd2(num1, num2):
+    if num2 == 0:
+        return num1
+    return gcd2(num2, num1 % num2)
+
+print(test(1112, 695))
+print(gcd2(1112, 695))
