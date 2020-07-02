@@ -94,22 +94,59 @@ for i in range(1, len(data_list)):
 print('test : {0}'.format(test))
 """
 
+#
+# def test(num1, num2):
+#     if num1 < num2:
+#         num1, num2 = num2, num1
+#
+#     while num2 != 0:
+#         n = num1 % num2
+#         num1 = num2
+#         num2 = n
+#
+#     return num1
+#
+# def gcd2(num1, num2):
+#     if num2 == 0:
+#         return num1
+#     return gcd2(num2, num1 % num2)
+#
+# print(test(1112, 695))
+# print(gcd2(1112, 695))
 
-def test(num1, num2):
-    if num1 < num2:
-        num1, num2 = num2, num1
 
-    while num2 != 0:
-        n = num1 % num2
-        num1 = num2
-        num2 = n
+import time
+import random
 
-    return num1
+# 페르마 소정리
+def prime_test(number):
+    if number <= 102:
+        for num in range(2, number):
+            if pow(num, number-1, number) != 1:
+                return False
+        return True
+    else:
+        for j in range(100):
+            a = random.randint(2, number - 1)
+            if pow(a, number - 1, number) != 1:
+                return False
+        return True
 
-def gcd2(num1, num2):
-    if num2 == 0:
-        return num1
-    return gcd2(num2, num1 % num2)
+start = time.time()
+cnt = 0
+for i in range(10000):
+    if prime_test(i):
+        cnt += 1
 
-print(test(1112, 695))
-print(gcd2(1112, 695))
+print(time.time() - start, cnt)
+
+# 에라토스테네스의 체
+start = time.time()
+number_list = [False, False] + [True] * 9999
+
+for i in range(2, 10000):
+    if number_list[i]:
+        for j in range(2*i, 10000, i):
+            number_list[j] = False
+
+print(time.time() - start, sum(number_list))
