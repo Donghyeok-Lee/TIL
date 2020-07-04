@@ -14,7 +14,7 @@
 
 <div id='tech-stack' />
 
-## 1. Tech Stack [더보기](Tech_Stack/Tech_Stack.md)
+## 1. Tech Stack [더보기](Summary/Tech_Stack.md)
 
 > 제가 사용하는 Python / Django / Vue에 대한 특징과 프로젝트 등을 모아놓은 문서입니다.
 
@@ -22,11 +22,9 @@
 
 
 
-
-
 <div id='programming_paradigm' />
 
-## 2. 프로그래밍 패러다임 (Programming_Paradigm) [더보기](Programming_Paradigm/Programming_Paradigm.md)
+## 2. 프로그래밍 패러다임 (Programming_Paradigm) [더보기](Summary/Programming_Paradigm.md)
 
 > 아직은 제대로 이해하지 못했지만, 프로그래밍 패러다임에 대한 정리입니다.
 >
@@ -44,7 +42,7 @@
 
 <div id='#data-structure' />
 
-## 3. 자료구조 [더보기](Data_Structure/Data_Structure.md)
+## 3. 자료구조 [더보기](Summary/Data_Structure.md)
 
 > 스스로 여러 자료를 통해 공부한 자료구조에 대한 내용입니다.
 
@@ -58,7 +56,7 @@
 
 <div id='algorithm' />
 
-## 4. 알고리즘 [더보기](Algorithm/Algorithm.md)
+## 4. 알고리즘 [더보기](Summary/Algorithm.md)
 
 > 알고리즘 공부 내용입니다.
 
@@ -72,7 +70,7 @@
 
 <div id='web' />
 
-## 5. Web [더보기](Web/Web.md)
+## 5. Web [더보기](Summary/Web.md)
 
 
 
